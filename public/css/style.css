@@ -1,0 +1,291 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+.hd1-footer{
+    padding: 25px;
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+.hd1-footer a{
+    color: white;
+}
+.hd1-footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.hd1-footer ul li{
+    margin-bottom: 5px;
+}
+.hd1-footer a:hover{
+    color: aqua
+}
+.hd1-copyright{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(60, 60, 60);
+    color: azure;
+}
+body a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 180px;
+    height: 100px;
+}
+.header{
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: top 0.5s;
+    border-bottom: 0.5px solid grey;
+}
+.header-top{
+    height: 30px;
+    background-color:black;
+    color: white;
+    display: flex;
+    padding: 2px;
+    position: relative;
+}
+.header-top .header-top-start{
+
+}
+.header-top .header-top-end{
+    position: absolute;
+    right: 15px;
+}
+.header-bottom{
+    width: 100%;
+    min-height: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    
+    box-sizing: border-box;
+}
+.menu{
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+.icon-header{
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+.search,.account-customer,.shopping-cart{
+    padding: 10px;
+}
+.account-customer-icon,.search-icon{
+    position: relative;
+}
+.account-login-register{
+    width: 150px;
+    border: 1px solid rgb(200, 200, 200);
+    background-color: white;
+    position: absolute;
+    bottom: -150px;
+    left: -30px;
+    visibility: hidden;
+}
+.account-login-register a{
+    display: block;
+    padding: 10px 0 10px 15px;
+}
+.account-customer:hover .account-login-register{
+    visibility: visible;
+    bottom: -100px;
+    transition: .5s ease;
+
+}
+.search-mini{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    bottom: -90px;
+    left: -30px;
+    visibility: hidden;
+}
+.search:hover .search-mini{
+    bottom: -60px;
+    visibility: visible;
+    transition: .5s ease;
+
+}
+
+/* Product-Item */
+.product-item{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+/* Product-Image */
+.product-item-image{
+    position: relative;
+    transition: padding 0.5s;
+    background-color: whitesmoke;
+}
+.product-item-image a .img-1{
+}
+.product-item-image a .img-2{
+    display: none;
+}
+.product-item-image:hover{
+    border: 0.5px solid rgb(232, 232, 232);
+    padding: 8px;
+}
+.product-item-image:hover a .img-2{
+    display: block;
+}
+.product-item-image:hover a .img-1{
+    display: none;
+}
+/* Product- Name & Price */
+.product-item-name,.product-item-price{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* Product-Name */
+.product-item-name:hover a{
+    color: aqua;
+}
+/* Product-Price */
+.product-item-price{
+    color: rgb(255, 60, 0);
+}
+/* Product-Button */
+.product-item-image button{
+    width: 100%;
+    background-color: aqua;
+    transition: .5s ease;
+    opacity:0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.product-item-image:hover button{
+    opacity:1;
+}
+.product-item-image button:hover{
+    background-color: rgb(0, 255, 75);
+    transition:  1.5s;
+}
+/**/
+/* Product-detail */
+.product-detail-name{
+
+}
+.product-detail-brand{
+    color: gray;
+}
+.product-detail-price{
+    color: rgb(255, 60, 0);
+    font-size: 22px;
+}
+/* Product-detail  Size */
+
+.size__btn label {
+	font-size: 14px;
+	color: #666666;
+    width: 25px;
+    border: 1px solid rgb(210, 210, 210);
+    text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+	margin-right: 5px;
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+ .size__btn label:last-child {
+	margin-right: 0;
+}
+@keyframes size__btn-color {
+    0% { box-shadow: 0 0 2px #cddfff, 0 0 5px #cddfff, 0 0 10px #cddfff; }
+    /* 50% { box-shadow: 0 0 20px #cddfff, 0 0 30px #ff99cc, 0 0 40px #ff99cc; } */
+    100% { box-shadow: 0 0 2px #cddfff, 0 0 5px #cddfff, 0 0 10px #cddfff; }
+  }
+.size__btn label.active {
+	color: orangered;
+    border-color: black;
+    animation: size__btn-color 1.5s infinite alternate;
+
+}
+
+ .size__btn label input {
+	position: absolute;
+	visibility: hidden;
+}
+
+
+.filter-name{
+    height: 50px;
+    background-color: aqua;
+    border-radius: 25px;
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+}
+
+/* Post new */
+.post-new{
+    background-color: white(255, 255, 255);
+    padding:40px 0 50px 0;
+}
+.post-new .post-item{
+    height: 100%;
+    border: 2px solid rgb(235, 235, 235);
+    box-sizing: border-box;
+    background-color: white;
+}
+.post-new .post-item img{
+}
+.post-new .post-item .post-item-title{
+    padding: 5px 10px 0px 10px;
+}
+.post-new .post-item .post-item-title:hover a{
+    color:aqua;
+    transition: 0.5s;
+}
+.post-new .post-item .post-item-description{
+    padding: 0px 10px 0px 10px;
+}
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px #33ccff, 0 0 10px #33ccff, 0 0 15px #33ccff; }
+  /* 50% { box-shadow: 0 0 20px #33ccff, 0 0 30px #ff99cc, 0 0 40px #ff99cc; } */
+  100% { box-shadow: 0 0 5px #33ccff, 0 0 10px #33ccff, 0 0 15px #33ccff; }
+}
+.post-new .post-item:hover{
+    background-color: rgb(245, 245, 245);
+    box-sizing: border-box;
+    animation: glowing 1.5s infinite alternate;
+}
+
+/* Cart */
+.shopping-cart-icon {
+    position: relative;
+    width: 32px; /* Chiều rộng của giỏ hàng */
+    height: 32px; /* Chiều cao của giỏ hàng */
+  }
+  
+.notification-bubble {
+    position: absolute;
+    top: -10px; /* Vị trí của bong bóng thông báo */
+    right: -10px;
+    width: 20px; /* Kích thước của bong bóng thông báo */
+    height: 20px;
+    background-color: rgb(255, 85, 0); /* Màu của bong bóng thông báo */
+    border-radius: 50%; /* Hình tròn */
+    color: white; /* Màu chữ */
+    text-align: center; /* Căn giữa chữ */
+    line-height: 20px; /* Chiều cao dòng chữ */
+    font-size: 14px; /* Kích thước chữ */
+}
+
