@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("phone");
             $table->string("title");
             $table->mediumText("content");
-            $table->unsignedInteger("reply_id")->default(0);
+            $table->unsignedInteger("replay_id")->default(0);
             $table->unsignedInteger("updated_by")->nullable();
             $table->unsignedTinyInteger("status")->default(2);
             $table->timestamps();

@@ -5,6 +5,7 @@ namespace App\View\Components;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
+use App\Models\Banner;
 
 class Slider extends Component
 {
@@ -21,6 +22,11 @@ class Slider extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.slider');
+        $args_banner = [
+            ['status','=',1],
+            ['position','=','slideshow']
+        ];
+        $list_slider = Banner::where($args_banner)->orderBy('created_at','desc')->get();
+        return view('components.slider',compact('list_slider'));
     }
 }

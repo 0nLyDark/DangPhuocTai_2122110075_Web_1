@@ -1,0 +1,15 @@
+/* Menu */
+thead tr th{
+    white-space: nowrap;
+}
+
+tbody tr td{
+    box-sizing: content-box;
+}
+
+.toast-top-center {
+    top: 50px !important;
+    /* Các thuộc tính khác tùy ý */
+}
+
+

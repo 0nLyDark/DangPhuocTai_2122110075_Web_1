@@ -5,71 +5,39 @@
 @endsection
 @section('content')
     <section class="content">
-        <div class="container py-4">
+        <div class="container py-4 ">
+            <div class="row">
+                <div class="col-12">
+                    <img src="{{ asset('image/') }}" alt="" class="img-fluid" >
+                </div>
+            </div>
             <div class="row">
                 <div class="filter col-lg-3">
-                    <ul class="list-group">
-                        <li  class="list-group-item  py-3">Category</li>
-                        <li  class="list-group-item list-group-item-action"><a href="">First item</a></li>
-                        <li  class="list-group-item list-group-item-action"><a href="">Second item</a></li>
-                        <li  class="list-group-item list-group-item-action"><a href="">Second item</a></li>
-                        <li  class="list-group-item list-group-item-action"><a href="">Second item</a></li>
-                        <li  class="list-group-item list-group-item-action"><a href="">Second item</a></li>
-                        <li  class="list-group-item list-group-item-action"><a href="">Third item</a></li>
-                    </ul>
+                    <x-filter-product />
                 </div>
                 <div class="col-lg-9">
                     <div class="row filter-name text-center py-4">
-                        <h2>Gấu đặc biệt </h2>
+                        <h2>Tất cả sản phẩm</h2>
                     </div>
-                    <div class="row filter-product pt-2">
-                        <p>Sắp xếp theo : 
-                        <select>
-                            <option>Lọc</option>
-                            <option>Mới nhất</option>
-                            <option>Giá tăng dần</option>
-                            <option>Giá giảm dần</option>
-
-                        </select>
-                    </p>
-                    </div>
+                    <x-filter :sort="$sort" :grid="$grid" />
                     <div class="row product">
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
+                        @if ($grid == '2')
+                            @foreach ($list_product as $productitem)
+                                <div class="col-6">
+                                    <x-product-item :$productitem />
+                                </div>
+                            @endforeach
+                        @else
+                            @foreach ($list_product as $productitem)
+                                <div class="col-md-4 col-6">
+                                    <x-product-item :$productitem />
+                                </div>
+                            @endforeach
+                        @endif
+                        
+                        <div class="col-12 d-flex justify-content-center">
+                            {{ $list_product->links() }}
                         </div>
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>   
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>   
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>   
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>   
-                        <div class="col-md-3 col-6">
-                            <x-product-item />
-                        </div>   
                     </div>
                 </div>
             </div>
